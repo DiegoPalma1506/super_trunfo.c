@@ -1,96 +1,39 @@
-#include <stdio.h> // Para funções de entrada (scanf) e saída (printf)
-#include <locale.h> // Para permitir acentuação nos prompts (opcional, mas melhora a usabilidade)
+#include <stdio.h> // Para a função de saída (printf)
+#include <locale.h> // Para permitir acentuação na saída
 
 /*
- * Programa: Cadastro Super Trunfo (Versão Simplificada)
- * Descrição: Este programa lê os dados de duas cartas do Super Trunfo
- * fornecidos pelo usuário e, em seguida, exibe esses dados
- * de forma organizada na tela.
- *
- * Restrições: Não utiliza loops (for/while) ou decisões (if/else).
+ * Programa: Cadastro Super Trunfo (Versão com Dados Prontos)
+ * Descrição: Este programa demonstra o armazenamento de dados
+ * de duas cartas do Super Trunfo usando variáveis já
+ * inicializadas e, em seguida, exibe esses dados na tela.
  */
 int main() {
-    // Configura o programa para aceitar acentos (ex: "População") nos prompts
+    // Configura o programa para aceitar acentos (ex: "População")
     setlocale(LC_ALL, "Portuguese");
 
-    // --- Variáveis para a Carta 1 ---
-    // Nomes de variáveis descritivos para fácil entendimento
-    char estado1;
-    char codigo1[5];      // Ex: "A01" + caractere nulo ('\0') = 4. Usamos 5 por segurança.
-    char nomeCidade1[50]; // Espaço para nomes de cidades, ex: "Rio de Janeiro"
-    int populacao1;
-    float area1;
-    float pib1;
-    int pontosTuristicos1;
-
-    // --- Variáveis para a Carta 2 ---
-    char estado2;
-    char codigo2[5];
-    char nomeCidade2[50];
-    int populacao2;
-    float area2;
-    float pib2;
-    int pontosTuristicos2;
+    // ------------------------------------------
+    // ETAPA 1: INICIALIZAÇÃO DOS DADOS DA CARTA 1
+    // ------------------------------------------
+    // Os dados são "hardcoded" (fixos) no programa
+    char estado1 = 'A';
+    char codigo1[5] = "A01";
+    char nomeCidade1[50] = "São Paulo";
+    int populacao1 = 12325000;
+    float area1 = 1521.11f;     // 'f' indica que é um float
+    float pib1 = 699.28f;
+    int pontosTuristicos1 = 50;
 
     // ------------------------------------------
-    // ETAPA 1: LEITURA DOS DADOS DA CARTA 1
+    // ETAPA 2: INICIALIZAÇÃO DOS DADOS DA CARTA 2
     // ------------------------------------------
-    printf("=== CADASTRO DA CARTA 1 ===\n");
+    char estado2 = 'B';
+    char codigo2[5] = "B02";
+    char nomeCidade2[50] = "Rio de Janeiro";
+    int populacao2 = 6748000;
+    float area2 = 1200.25f;
+    float pib2 = 300.50f;
+    int pontosTuristicos2 = 30;
 
-    printf("Digite o Estado (A-H): ");
-    // Usamos " %c" (com espaço) para consumir qualquer 'Enter' anterior
-    scanf(" %c", &estado1);
-
-    printf("Digite o Código da Carta (ex: A01): ");
-    scanf("%s", codigo1);
-
-    printf("Digite o Nome da Cidade: ");
-    // Usamos " %[^\n]" (com espaço) para ler a linha inteira,
-    // permitindo nomes com espaços (ex: "São Paulo")
-    scanf(" %[^\n]", nomeCidade1);
-
-    printf("Digite a População: ");
-    scanf("%d", &populacao1);
-
-    printf("Digite a Área (em km²): ");
-    scanf("%f", &area1);
-
-    printf("Digite o PIB (em bilhões): ");
-    scanf("%f", &pib1);
-
-    printf("Digite o Número de Pontos Turísticos: ");
-    scanf("%d", &pontosTuristicos1);
-
-    printf("\n"); // Adiciona uma linha em branco para separar
-
-    // ------------------------------------------
-    // ETAPA 2: LEITURA DOS DADOS DA CARTA 2
-    // ------------------------------------------
-    // (Código repetido conforme a restrição de não usar loops)
-    printf("=== CADASTRO DA CARTA 2 ===\n");
-
-    printf("Digite o Estado (A-H): ");
-    scanf(" %c", &estado2); // O espaço antes de %c é importante
-
-    printf("Digite o Código da Carta (ex: B02): ");
-    scanf("%s", codigo2);
-
-    printf("Digite o Nome da Cidade: ");
-    scanf(" %[^\n]", nomeCidade2); // O espaço antes de %[^\n] também
-
-    printf("Digite a População: ");
-    scanf("%d", &populacao2);
-
-    printf("Digite a Área (em km²): ");
-    scanf("%f", &area2);
-
-    printf("Digite o PIB (em bilhões): ");
-    scanf("%f", &pib2);
-
-    printf("Digite o Número de Pontos Turísticos: ");
-    scanf("%d", &pontosTuristicos2);
-
-    printf("\n\n"); // Adiciona duas linhas em branco
 
     // ------------------------------------------
     // ETAPA 3: EXIBIÇÃO DOS DADOS CADASTRADOS
